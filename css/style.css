@@ -19,7 +19,98 @@ h1{
  color: rgba(31,44,93,255);
 
 }
-
+.stadium{
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+    grid-template-rows: repeat(4,300px);
+    background-image: url('../images/P2.png') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    /* background: rgb(32, 31, 31); */
+    background-color: rgb(100, 100, 100);
+    justify-content: center;
+   
+}
+.player1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.player2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+   
+}
+.player3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.player4{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.player5{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.player6{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.player7{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.player8{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.player9{
+    grid-column: 3/4;
+    grid-row: 3/4;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.player10{
+    grid-column: 4/5;
+    grid-row: 3/4;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.player11{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    transform: translateX(50%);
+}
 .stadium img {
     width: 700px;
     height: 700px;
