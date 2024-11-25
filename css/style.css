@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-color:black;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40%;
+   
+}
+img {
+      width: 300px;       
+}
+h1{
+ color: rgba(31,44,93,255);
+
+}
+.option {
+    color: white;
+}
+
+.stadium img {
+    width: 700px;
+    height: 700px;
+}
