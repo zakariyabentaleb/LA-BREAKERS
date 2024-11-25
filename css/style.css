@@ -5,7 +5,7 @@
 }
 .header{
     background-color:black;
-    height: 30%;
+    height: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -13,17 +13,30 @@
    
 }
 img {
-      width: 300px;       
+      width: 200px;       
 }
 h1{
  color: rgba(31,44,93,255);
 
 }
-.option {
-    color: white;
-}
 
 .stadium img {
     width: 700px;
     height: 700px;
+}
+
+.add-player-button {
+    background-color: rgba(31,44,93,255);
+    padding: 8px 16px; 
+    border-radius: 0.5rem; 
+    color: #fcf7db;
+    font-weight: 500; 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.add-player-button:hover {
+    background-color: #078b03;
+    color: #000000;
 }
