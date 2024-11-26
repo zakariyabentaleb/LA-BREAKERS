@@ -35,13 +35,12 @@ h1{
 }
 .player1{
     display: flex;
-   align-items: end;
-   justify-content: center;
     grid-column: 2/3;
     grid-row: 1/2;
     background-image: url('../images/P3.webp') ;
     background-position: center; 
     background-repeat: no-repeat; 
+    
   
 }
 .player2{
@@ -147,8 +146,22 @@ h1{
     transform: translateX(50%);
 }
 .position{
-    color: white;
+    color: goldenrod;
 }
+.rating{
+    color: goldenrod;
+    
+}
+.rating-position{
+    margin-top: 30%;
+    margin-left: -70%;
+}
+.name{
+    color:white;
+    display: flex;
+    margin-top: 105%;
+}
+
 .stadium img {
     width: 700px;
     height: 700px;
@@ -168,4 +181,23 @@ h1{
 .add-player-button:hover {
     background-color: #078b03;
     color: #000000;
+}
+.player1 img{
+    height: 50%;
+    width: 140px;
+    margin-top: 26%;
+    margin-left: 15%;  
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;  
+        height: auto;  
+        gap: 1rem;  
+    }
+    img {
+        width: 120px;  
+    }
+    h1 {
+        font-size: 1.8rem;  
+    }
 }
