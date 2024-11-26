@@ -15,6 +15,9 @@
 img {
       width: 200px;       
 }
+.TEAMS a {
+    text-decoration: none;
+}
 h1{
  color: white;
 
@@ -31,7 +34,7 @@ h1{
     background-repeat: no-repeat; 
     background-size: contain;
     justify-content: center;
-   
+  
 }
 .player1{
     display: flex;
