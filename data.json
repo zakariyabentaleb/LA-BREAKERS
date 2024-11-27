@@ -1,6 +1,22 @@
 {
     "players": [
       {
+        "name": "Zakariya bentaleb",
+        "photo": "../images/ANA.png",
+        "position": "GK",
+        "nationality": "Italy",
+        "flag": "https://cdn.sofifa.net/flags/it.png",
+        "club": "Fc Youcode",
+        "logo": "https://cdn.sofifa.net/meta/team/591/120.png",
+        "rating": 99,
+        "diving": 88,
+        "handling": 84,
+        "kicking": 75,
+        "reflexes": 90,
+        "speed": 50,
+        "positioning": 85
+      },
+      {
         "name": "Lionel Messi",
         "photo": "https://cdn.sofifa.net/players/158/023/25_120.png",
         "position": "CF",
@@ -415,6 +431,7 @@
         "speed": 50,
         "positioning": 85
       }
+     
     ]
   }
   

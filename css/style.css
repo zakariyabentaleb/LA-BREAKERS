@@ -12,7 +12,7 @@
     gap: 20%;
    
 }
-img {
+.header img {
       width: 200px;       
 }
 .TEAMS a {
@@ -34,10 +34,13 @@ h1{
     background-repeat: no-repeat; 
     background-size: contain;
     justify-content: center;
+    
   
 }
 .player1{
     display: flex;
+    align-items: end;
+    justify-content: center;
     grid-column: 2/3;
     grid-row: 1/2;
     background-image: url('../images/P3.webp') ;
@@ -166,8 +169,9 @@ h1{
 }
 
 .stadium img {
-    width: 700px;
-    height: 700px;
+    width: 100px;
+    height: 100px;
+   
 }
 
 .add-player-button {
@@ -191,6 +195,65 @@ h1{
     margin-top: 26%;
     margin-left: 15%;  
 }
+/* player grid */
+.section1 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/P4.png') ;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.player-card {
+    background-image: url('../images/P3.webp') ;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+.player-card h3{
+    color: goldenrod;
+}
+.player-card p{
+    color:white;
+}
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.player-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.club-logo {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.player-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.player-stats {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
 /* ****************pop up **************** */
 
 #footballPopup {
@@ -291,6 +354,12 @@ h1{
 .hidden {
     display: none;
 }
+.player-img {
+    width: 120px;        
+    height: 120px;       
+    object-fit: cover;   
+    border-radius: 10px; 
+  }
 
 /* *********** */
 @media (max-width: 768px) {
@@ -299,10 +368,13 @@ h1{
         height: auto;  
         gap: 1rem;  
     }
-    img {
+    .header img {
         width: 120px;  
     }
-    h1 {
+    .header h1 {
         font-size: 1.8rem;  
+    }
+    .players-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
     }
 }
