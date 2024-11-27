@@ -32,3 +32,48 @@ function togglePopup() {
 addButton.addEventListener("click", togglePopup);
 cancelButton.addEventListener("click", togglePopup);
 // -----------------------------------------------------------------//
+
+// ------------------------------add button----------------------------------------//
+const ConfimButton = document.getElementById("addPlayer"); 
+ConfimButton.addEventListener("click", addplayer);
+function addplayer() {
+    const playerInput = document.getElementById("playerName");
+    const playerText1 = playerInput.value.trim();
+
+    const positionInput = document.getElementById("playerPosition");
+    const playerText2 = positionInput.value.trim();
+
+    const ratingInput = document.getElementById("playerRating");
+    const playerText3 = ratingInput.value.trim();
+
+     const playerList = document.querySelector(".players-grid");;
+
+    if (playerText1 && playerText2 && playerText3) {
+
+        const playerContent = document.createElement("div");
+        playerContent.className = "player-card";
+
+        const playerImg = document.createElement("img"); 
+         playerImg.src = `../images/P6.png`; ;     
+        
+        const playerName = document.createElement("h3");
+        playerName.innerText = playerText1;
+        
+        const playerposition = document.createElement("p");
+        playerposition.innerText = playerText2;
+        
+        
+        const playerrating = document.createElement("p");
+        playerrating.innerText = playerText3;
+       
+
+        playerContent.appendChild(playerImg);
+        playerContent.appendChild(playerName);
+        playerContent.appendChild(playerposition);
+        playerContent.appendChild(playerrating);
+       
+
+        playerList.appendChild(playerContent);
+
+        
+    }}
