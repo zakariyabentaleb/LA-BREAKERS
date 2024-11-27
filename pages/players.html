@@ -15,7 +15,7 @@
            <a href="players.html"><h1>MY-TEAMS</h1></a>
         </div>
         <div class="add-player-container">
-            <button  id="add" class="add-player-button">Add Player</button>
+            <button  id="add1" class="add-player-button">Add Player</button>
         </div>
        </div>
     </header>
@@ -23,9 +23,46 @@
     <div class="players-grid">
       
     </div>
-
+ <!-- --------------------------------- my popup ------------------------------------------ -->
 
     </section>
+    <div id="footballPopup"  >
+        <div id="footballPopupform" class="popup-content hidden">
+            <h2 class="popup-title">Add New Player</h2>
+            
+           
+            <div class="input-group">
+                <label for="playerName">Player Name</label>
+                <input id="playerName" type="text" placeholder="Enter player name"/>
+            </div>
+            
+          
+            <div class="input-group">
+                <label for="playerPosition">Position</label>
+                <select id="playerPosition">
+                    <option value="">Select Position</option>
+                    <option value="forward">CF</option>
+                    <option value="midfielder">LMF</option>
+                    <option value="defender">CMF</option>
+                    <option value="goalkeeper">RMF</option>
+                    <option value="goalkeeper">LB</option>
+                    <option value="goalkeeper">RB</option>
+                    <option value="goalkeeper">CB</option>
+                    <option value="goalkeeper">GK</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="playerRating">Overall Rating</label>
+                <input id="playerRating" type="number" min="1" max="99" placeholder="Enter player rating"/>
+            </div>
+            
+            <div class="button-group">
+                <button id="addPlayer" class="button-primary">Confirm</button>
+                <button id="cancelPlayer" class="button-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="../assets/player.js"></script> 
 </html>

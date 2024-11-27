@@ -34,8 +34,7 @@ h1{
     background-repeat: no-repeat; 
     background-size: contain;
     justify-content: center;
-    
-  
+    transform: scale(0.9);
 }
 .player1{
     display: flex;
@@ -45,9 +44,7 @@ h1{
     grid-row: 1/2;
     background-image: url('../images/P3.webp') ;
     background-position: center; 
-    background-repeat: no-repeat; 
-    
-  
+    background-repeat: no-repeat;  
 }
 .player2{
     display: flex;
@@ -58,7 +55,6 @@ h1{
     background-image: url('../images/P3.webp') ;
     background-position: center; 
     background-repeat: no-repeat; 
-   
 }
 .player3{
     display: flex;
@@ -375,6 +371,19 @@ h1{
         font-size: 1.8rem;  
     }
     .players-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+        grid-template-columns: repeat(2, 1fr);
     }
+    .stadium{
+        display: grid;
+        margin-top: -40%;
+        grid-template-columns: repeat(4,200px);
+        grid-template-rows: repeat(4,300px);
+        background-image: url('../images/P2.png') ;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: contain;
+        justify-content: center;
+        transform: scale(0.6);
+    }
+   
 }
