@@ -66,7 +66,7 @@ function addplayer() {
         const playerrating = document.createElement("p");
         playerrating.innerText = playerText3;
        
-
+        
         playerContent.appendChild(playerImg);
         playerContent.appendChild(playerName);
         playerContent.appendChild(playerposition);
@@ -75,5 +75,12 @@ function addplayer() {
 
         playerList.appendChild(playerContent);
 
-        
+        // -------------------------------------remove button---------------------------------------------//
+        const removeButton = document.createElement("button");
+        removeButton.innerText = "Remove";
+        removeButton.onclick = function () {
+            playerList.removeChild(playerContent);
+        };
+
+        playerContent.appendChild(removeButton);
     }}
