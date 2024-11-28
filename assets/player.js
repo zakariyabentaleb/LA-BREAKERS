@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>${player.club}</p>
                     <p>${player.rating}</p>
                 `;
+                const img = card.querySelector('img');
+            img.addEventListener('click', InFields);
                 grid.appendChild(card);
             });
         })
@@ -60,7 +62,7 @@ function addplayer() {
         playerContent.appendChild(playerposition);
         playerContent.appendChild(playerrating);
        
-
+       playerContent.querySelector("img").addEventListener("click", InFields);
         playerList.appendChild(playerContent);
 
         // -------------------------------------remove button---------------------------------------------//
@@ -97,5 +99,8 @@ function addplayer() {
         ratingInput.value = "";
         togglePopup()
     }}
+// ---------------------------------iselect players in fields---------------------------------//
+function InFields() {
+    // console.log("hiii");
 
-    // -------------------------------------------------------------------------//
+}

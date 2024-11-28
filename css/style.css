@@ -387,7 +387,7 @@ h1{
     }
     .stadium{
         display: grid;
-        margin-top: -40%;
+        margin-top: -30%;
         grid-template-columns: repeat(4,200px);
         grid-template-rows: repeat(4,300px);
         background-image: url('../images/P2.png') ;
@@ -396,6 +396,13 @@ h1{
         background-size: contain;
         justify-content: center;
         transform: scale(0.6);
+    }
+    .section1 {
+        margin-top: -40%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        background-image: url('../images/P4.png') ;
     }
    
 }
