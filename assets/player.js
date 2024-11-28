@@ -82,5 +82,28 @@ function addplayer() {
             playerList.removeChild(playerContent);
         };
 
+         // -------------------------------------edit button ---------------------------------------------// 
+         const editButton = document.createElement("button");
+         editButton.innerText = "Edit";
+         editButton.className = "px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600";
+         editButton.onclick = function () {
+             document.getElementById("playerName").value = playerText1;
+             document.getElementById("playerPosition").value = playerText2;
+             document.getElementById("playerRating").value = playerText3;
+             togglePopup();
+             playerList.removeChild(playerContent);
+         };
+        
+        playerContent.appendChild(playerImg);
+        playerContent.appendChild(playerName);
+        playerContent.appendChild(playerposition);
+        playerContent.appendChild(playerrating);
+       
         playerContent.appendChild(removeButton);
+        playerContent.appendChild(editButton);
+
+
+        playerInput.value = "";
+        positionInput.value = "";
+        ratingInput.value = "";
     }}
