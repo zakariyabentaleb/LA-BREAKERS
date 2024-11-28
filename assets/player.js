@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const players = data.players;
             const grid = document.querySelector('.players-grid');
             
-            players.forEach(player => {
+            players.forEach((player) => {
                 const card = document.createElement('div');
                 card.classList.add('player-card');
                 card.innerHTML = `
@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>${player.club}</p>
                     <p>${player.rating}</p>
                 `;
-                const img = card.querySelector('img');
-            img.addEventListener('click', InFields);
+                
                 grid.appendChild(card);
             });
         })
@@ -63,7 +62,7 @@ function addplayer() {
         playerContent.appendChild(playerposition);
         playerContent.appendChild(playerrating);
        
-       playerContent.querySelector("img").addEventListener("click", InFields);
+       
         playerList.appendChild(playerContent);
 
         // -------------------------------------remove button---------------------------------------------//
@@ -100,18 +99,4 @@ function addplayer() {
         ratingInput.value = "";
         togglePopup()
     }}
-// ---------------------------------iselect players in fields---------------------------------//
-function InFields() {
-    console.log("hiii");
-    const playercard = document.querySelector(".player-card");
-    const cardfields = document.querySelector(".card-fields");
-    cardfields.appendChild(playercard);
 
-}
-// function InFields(event) {
-//     const clickedCard = event.currentTarget;  // Get the clicked card
-//     const cardFields = document.querySelector(".card-fields");
-
-//     // Move the clicked card to the .card-fields container
-//     cardFields.appendChild(clickedCard);
-// }
