@@ -21,101 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Erreur lors du chargement des joueurs :", error)); 
 });
-
-// ----------------------------show and hide popup-----------------//
-const addButton = document.getElementById("add1"); 
-const cancelButton = document.getElementById("cancelPlayer");
-function togglePopup() {
-    const pop = document.getElementById("footballPopupform");
-    pop.classList.toggle("hidden");
-}
-addButton.addEventListener("click", togglePopup);
-cancelButton.addEventListener("click", togglePopup);
-// -----------------------------------------------------------------//
-
 // // ------------------------------add button----------------------------------------//
-// const ConfimButton = document.getElementById("addPlayer"); 
-// ConfimButton.addEventListener("click", addplayer);
-// function addplayer() {
-//     const playerInput = document.getElementById("playerName");
-//     const playerText1 = playerInput.value.trim();
-
-//     const positionInput = document.getElementById("playerPosition");
-//     const playerText2 = positionInput.value.trim();
-
-//     const ratingInput = document.getElementById("playerRating");
-//     const playerText3 = ratingInput.value.trim();
-
-//      const playerList = document.querySelector(".players-grid");;
-
-//     if (playerText1 && playerText2 && playerText3) {
-
-//         const playerContent = document.createElement("div");
-//         playerContent.className = "player-card";
-
-//         const playerImg = document.createElement("img"); 
-//          playerImg.src = `../images/P6.png`; ;     
-        
-//         const playerName = document.createElement("h3");
-//         playerName.innerText = playerText1;
-        
-//         const playerposition = document.createElement("p");
-//         playerposition.innerText = playerText2;
-        
-        
-//         const playerrating = document.createElement("p");
-//         playerrating.innerText = playerText3;
-       
-        
-//         playerContent.appendChild(playerImg);
-//         playerContent.appendChild(playerName);
-//         playerContent.appendChild(playerposition);
-//         playerContent.appendChild(playerrating);
-       
-
-//         playerList.appendChild(playerContent);
-
-//         // -------------------------------------remove button---------------------------------------------//
-//         const removeButton = document.createElement("button");
-//         removeButton.innerText = "Remove";
-//         removeButton.className = "button1";
-//         removeButton.onclick = function () {
-//             playerList.removeChild(playerContent);
-//         };
-
-//          // -------------------------------------edit button ---------------------------------------------// 
-//          const editButton = document.createElement("button");
-//          editButton.innerText = "Edit";
-//          editButton.className = "button2";
-//          editButton.onclick = function () {
-//              document.getElementById("playerName").value = playerText1;
-//              document.getElementById("playerPosition").value = playerText2;
-//              document.getElementById("playerRating").value = playerText3;
-//              togglePopup();
-//              playerList.removeChild(playerContent);
-//          };
-        
-//         playerContent.appendChild(playerImg);
-//         playerContent.appendChild(playerName);
-//         playerContent.appendChild(playerposition);
-//         playerContent.appendChild(playerrating);
-       
-//         playerContent.appendChild(removeButton);
-//         playerContent.appendChild(editButton);
-
-
-//         playerInput.value = "";
-//         positionInput.value = "";
-//         ratingInput.value = "";
-//         togglePopup()
-//     }}
-// Add Event Listener
-const ConfirmButton = document.getElementById("addPlayer");
-ConfirmButton.addEventListener("click", addPlayer);
-
-document.addEventListener("DOMContentLoaded", loadPlayers);
-
-function addPlayer() {
+const ConfimButton = document.getElementById("addPlayer"); 
+ConfimButton.addEventListener("click", addplayer);
+function addplayer() {
     const playerInput = document.getElementById("playerName");
     const playerText1 = playerInput.value.trim();
 
@@ -125,91 +34,68 @@ function addPlayer() {
     const ratingInput = document.getElementById("playerRating");
     const playerText3 = ratingInput.value.trim();
 
-    const playerList = document.querySelector(".players-grid");
+     const playerList = document.querySelector(".players-grid");;
 
     if (playerText1 && playerText2 && playerText3) {
+
+        const playerContent = document.createElement("div");
+        playerContent.className = "player-card";
+
+        const playerImg = document.createElement("img"); 
+         playerImg.src = `../images/P6.png`; ;     
         
-        const playerData = {
-            name: playerText1,
-            position: playerText2,
-            rating: playerText3,
-            imgSrc: "../images/P6.png" 
+        const playerName = document.createElement("h3");
+        playerName.innerText = playerText1;
+        
+        const playerposition = document.createElement("p");
+        playerposition.innerText = playerText2;
+        
+        
+        const playerrating = document.createElement("p");
+        playerrating.innerText = playerText3;
+       
+        
+        playerContent.appendChild(playerImg);
+        playerContent.appendChild(playerName);
+        playerContent.appendChild(playerposition);
+        playerContent.appendChild(playerrating);
+       
+
+        playerList.appendChild(playerContent);
+
+        // -------------------------------------remove button---------------------------------------------//
+        const removeButton = document.createElement("button");
+        removeButton.innerText = "Remove";
+        removeButton.className = "button1";
+        removeButton.onclick = function () {
+            playerList.removeChild(playerContent);
         };
 
-        appendPlayerToGrid(playerData, playerList);
-        savePlayerToLocalStorage(playerData);
+         // -------------------------------------edit button ---------------------------------------------// 
+         const editButton = document.createElement("button");
+         editButton.innerText = "Edit";
+         editButton.className = "button2";
+         editButton.onclick = function () {
+             document.getElementById("playerName").value = playerText1;
+             document.getElementById("playerPosition").value = playerText2;
+             document.getElementById("playerRating").value = playerText3;
+             togglePopup();
+             playerList.removeChild(playerContent);
+         };
+        
+        playerContent.appendChild(playerImg);
+        playerContent.appendChild(playerName);
+        playerContent.appendChild(playerposition);
+        playerContent.appendChild(playerrating);
+       
+        playerContent.appendChild(removeButton);
+        playerContent.appendChild(editButton);
+
+
         playerInput.value = "";
         positionInput.value = "";
         ratingInput.value = "";
-        togglePopup();
-    }
-}
+        togglePopup()
+    }}
 
-
-function appendPlayerToGrid(playerData, playerList) {
-    const playerContent = document.createElement("div");
-    playerContent.className = "player-card";
-
-    const playerImg = document.createElement("img");
-    playerImg.src = playerData.imgSrc;
-
-    const playerName = document.createElement("h3");
-    playerName.innerText = playerData.name;
-
-    const playerPosition = document.createElement("p");
-    playerPosition.innerText = playerData.position;
-
-    const playerRating = document.createElement("p");
-    playerRating.innerText = playerData.rating;
-
-    playerContent.appendChild(playerImg);
-    playerContent.appendChild(playerName);
-    playerContent.appendChild(playerPosition);
-    playerContent.appendChild(playerRating);
-
-    const removeButton = document.createElement("button");
-    removeButton.innerText = "Remove";
-    removeButton.className = "button1";
-    removeButton.onclick = function () {
-        playerList.removeChild(playerContent);
-        removePlayerFromLocalStorage(playerData.name);
-    };
-
-    const editButton = document.createElement("button");
-    editButton.innerText = "Edit";
-    editButton.className = "button2";
-    editButton.onclick = function () {
-        document.getElementById("playerName").value = playerData.name;
-        document.getElementById("playerPosition").value = playerData.position;
-        document.getElementById("playerRating").value = playerData.rating;
-        togglePopup();
-        playerList.removeChild(playerContent);
-        removePlayerFromLocalStorage(playerData.name);
-    };
-
-    playerContent.appendChild(removeButton);
-    playerContent.appendChild(editButton);
-
-    playerList.appendChild(playerContent);
-}
-
-function savePlayerToLocalStorage(playerData) {
-    let players = JSON.parse(localStorage.getItem("players")) || [];
-    players.push(playerData);
-    localStorage.setItem("players", JSON.stringify(players));
-}
-
-function loadPlayers() {
-    const playerList = document.querySelector(".players-grid");
-    const players = JSON.parse(localStorage.getItem("players")) || [];
-    players.forEach(player => {
-        appendPlayerToGrid(player, playerList);
-    });
-}
-
-
-function removePlayerFromLocalStorage(playerName) {
-    let players = JSON.parse(localStorage.getItem("players")) || [];
-    players = players.filter(player => player.name !== playerName);
-    localStorage.setItem("players", JSON.stringify(players));
-}
+    // -------------------------------------------------------------------------//
