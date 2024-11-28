@@ -78,6 +78,7 @@ function addplayer() {
         // -------------------------------------remove button---------------------------------------------//
         const removeButton = document.createElement("button");
         removeButton.innerText = "Remove";
+        removeButton.className = "button1";
         removeButton.onclick = function () {
             playerList.removeChild(playerContent);
         };
@@ -85,7 +86,7 @@ function addplayer() {
          // -------------------------------------edit button ---------------------------------------------// 
          const editButton = document.createElement("button");
          editButton.innerText = "Edit";
-         editButton.className = "px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600";
+         editButton.className = "button2";
          editButton.onclick = function () {
              document.getElementById("playerName").value = playerText1;
              document.getElementById("playerPosition").value = playerText2;
@@ -106,4 +107,5 @@ function addplayer() {
         playerInput.value = "";
         positionInput.value = "";
         ratingInput.value = "";
+        togglePopup()
     }}

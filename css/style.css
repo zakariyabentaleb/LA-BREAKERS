@@ -356,6 +356,18 @@ h1{
     object-fit: cover;   
     border-radius: 10px; 
   }
+.button1{
+    border-radius: 5%;
+    color: white;
+    background-color: red;
+   
+}
+.button2{
+    border-radius: 5%;
+    color: white;
+    background-color: blue;
+   
+}
 
 /* ******responsive***** */
 @media (max-width: 768px) {
