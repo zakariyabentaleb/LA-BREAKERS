@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Erreur lors du chargement des joueurs :", error)); 
 });
+
 // // ------------------------------add button----------------------------------------//
 const ConfimButton = document.getElementById("addPlayer"); 
 ConfimButton.addEventListener("click", addplayer);
@@ -101,6 +102,16 @@ function addplayer() {
     }}
 // ---------------------------------iselect players in fields---------------------------------//
 function InFields() {
-    // console.log("hiii");
+    console.log("hiii");
+    const playercard = document.querySelector(".player-card");
+    const cardfields = document.querySelector(".card-fields");
+    cardfields.appendChild(playercard);
 
 }
+// function InFields(event) {
+//     const clickedCard = event.currentTarget;  // Get the clicked card
+//     const cardFields = document.querySelector(".card-fields");
+
+//     // Move the clicked card to the .card-fields container
+//     cardFields.appendChild(clickedCard);
+// }
