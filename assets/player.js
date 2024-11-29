@@ -16,16 +16,18 @@
                     <p>${player.club}</p>
                     <p>${player.rating}</p>
                 `;
-                
-                grid.appendChild(card);
+
+                grid.appendChild(card);           
+
             });
         })
        
-
 // // ------------------------------add button----------------------------------------//
 const ConfimButton = document.getElementById("addPlayer"); 
 ConfimButton.addEventListener("click", addplayer);
 function addplayer() {
+    const regexName = /^[a-zA-Z\s]{1,15}$/;
+
     const playerInput = document.getElementById("playerName");
     const playerText1 = playerInput.value.trim();
 
@@ -33,7 +35,16 @@ function addplayer() {
     const playerText2 = positionInput.value.trim();
 
     const ratingInput = document.getElementById("playerRating");
+    if(!regexName.test(playerText1)){
+        alert("wesh a said")
+        return
+    }
+    if (ratingInput.value<0 || ratingInput.value>100 ){
+       alert("veuillez slp entre un rating entre 0 et 99") 
+       return
+    }
     const playerText3 = ratingInput.value.trim();
+  
 
      const playerList = document.querySelector(".players-grid");;
 
@@ -100,7 +111,6 @@ function addplayer() {
     }}
 
 // ------------------SHOW POPUP AND HIDE IT  ------------------------//
-
 const addButton = document.getElementById("add1"); 
 const cancelButton = document.getElementById("cancelPlayer");
 function togglePopup() {
@@ -110,63 +120,6 @@ function togglePopup() {
 addButton.addEventListener("click", togglePopup);
 cancelButton.addEventListener("click", togglePopup);
 // ----------------------------------add player in fields-------------------------------/
-const playerCards = document.querySelectorAll(".player-card"); 
-const cardFields = document.querySelectorAll(".card-fields"); 
-
-function inFields(event) {
-    const playerCard = event.currentTarget;
-    const playerName = playerCard.querySelector("h3").innerText;
-    const playerPosition = playerCard.querySelector("p").innerText; 
-    const playerImageSrc = playerCard.querySelector("img").src;
-
-    // Find all the target fields with the same position
-    const targetFields = Array.from(cardFields).filter(field => 
-        field.querySelector(".position").innerText === playerPosition
-    );
-  
-    // Loop through the fields and append to the first empty one
-    for (let field of targetFields) {
-        // Check if the field already has a player assigned (by checking if it has a child with class "player-info")
-        if (!field.querySelector(".player-info")) {
-            // Create a container for player info
-            const playerInfo = document.createElement("div");
-            playerInfo.classList.add("player-info");
-
-            // Add player image
-            const img = document.createElement("img");
-            img.src = playerImageSrc;
-            img.alt = playerName;
-            img.classList.add("player-img");
-
-            // Add player name
-            const name = document.createElement("h1");
-            name.innerText = playerName;
-            name.classList.add("player-name");
-
-            // Add player position
-            const position = document.createElement("p");
-            position.innerText = playerPosition;
-            position.classList.add("player-position");
-
-          
-
-            // Append player info to the field
-            playerInfo.appendChild(img);
-            playerInfo.appendChild(name);
-            playerInfo.appendChild(position);
-            field.appendChild(playerInfo);
-
-            // Break the loop after adding the player to the first empty field
-            break;
-        }
-    }
-}
-
-// Add event listeners to each player card
-playerCards.forEach(card => {
-    card.addEventListener("click", inFields);
-});
-
 
 
 

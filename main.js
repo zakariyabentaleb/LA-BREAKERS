@@ -20,6 +20,8 @@
                 `;
                 
                 grid.appendChild(card);
+
+                card.addEventListener("click", inFields);
             });
         })
 // -----------------------------show modul----------------------------------//
@@ -42,25 +44,57 @@ function removemodul() {
     pop.classList.remove("visible");
 }
 closeModal.addEventListener("click", removemodul);
-// //------------------------------(+)button------------------------------------------------//
-// const addButton1 = document.getElementById("add-player-modul"); 
-// const cancelButton1 = document.getElementById("cancelPlayer");
-// function togglePopup1() {
-//     console.log("hiii");
-    
-//     const pop = document.getElementById("footballPopupform");
-//     pop.classList.toggle("hidden");
-// }
-// addButton1.addEventListener("click", togglePopup1);
-// cancelButton1.addEventListener("click", togglePopup1);
 
 //-----------------------------------------put it in field-------------------------------------------------//
-// const playerCards = document.querySelectorAll(".player-card"); 
+const playerCards = document.querySelectorAll(".player-card"); 
+const cardFields = document.querySelectorAll(".card-fields"); 
 
-// function inFields() {
-//     console.log("hiiii");
-// }
+function inFields(event) {
+    alert("added")
+    const playerCard = event.currentTarget;
+    const playerName = playerCard.querySelector("h3").innerText;
+    const playerPosition = playerCard.querySelector("p").innerText; 
+    const playerImageSrc = playerCard.querySelector("img").src;
 
-// playerCards.forEach(card => {
-//     card.addEventListener("click",inFields);
-// });
+    // Find all the target fields with the same position
+    const targetFields = Array.from(cardFields).filter(field => 
+        field.querySelector(".position").innerText === playerPosition
+    );
+  
+    // Loop through the fields and append to the first empty one
+    for (let field of targetFields) {
+        // Check if the field already has a player assigned (by checking if it has a child with class "player-info")
+        if (!field.querySelector(".player-info")) {
+            // Create a container for player info
+            const playerInfo = document.createElement("div");
+            playerInfo.classList.add("player-info");
+
+            // Add player image
+            const img = document.createElement("img");
+            img.src = playerImageSrc;
+            img.alt = playerName;
+            img.classList.add("player-img");
+
+            // Add player name
+            const name = document.createElement("h1");
+            name.innerText = playerName;
+            name.classList.add("player-name");
+
+            // Add player position
+            const position = document.createElement("p");
+            position.innerText = playerPosition;
+            position.classList.add("player-position");
+
+          
+
+            // Append player info to the field
+            playerInfo.appendChild(img);
+            playerInfo.appendChild(name);
+            playerInfo.appendChild(position);
+            field.appendChild(playerInfo);
+
+            // Break the loop after adding the player to the first empty field
+            break;
+        }
+    }
+}
