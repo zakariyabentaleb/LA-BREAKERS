@@ -1,19 +1,11 @@
-// ------------------SHOW POPUP AND HIDE IT  ------------------------//
 
-const addButton = document.getElementById("add1"); 
-const cancelButton = document.getElementById("cancelPlayer");
-function togglePopup() {
-    const pop = document.getElementById("footballPopupform");
-    pop.classList.toggle("hidden");
-}
-addButton.addEventListener("click", togglePopup);
-cancelButton.addEventListener("click", togglePopup);
 // // ----------------------------------------------------------------------//
-document.addEventListener("DOMContentLoaded", () => {
     fetch('../data.json')
         .then(response => response.json())
         .then(data => {
             const players = data.players;
+            
+            
             const grid = document.querySelector('.players-grid1');
             
             players.forEach((player) => {
@@ -30,13 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 grid.appendChild(card);
             });
         })
-        .catch(error => console.error("Erreur lors du chargement des joueurs :", error)); 
-});
 // -----------------------------show modul----------------------------------//
 const cardfields = document.querySelectorAll(".card-fields");
 
 function showmodul() {
-    console.log("hiiiii");
     const pop = document.getElementById("playersModal");
     pop.classList.add("visible");
 }
@@ -53,4 +42,25 @@ function removemodul() {
     pop.classList.remove("visible");
 }
 closeModal.addEventListener("click", removemodul);
+// //------------------------------(+)button------------------------------------------------//
+// const addButton1 = document.getElementById("add-player-modul"); 
+// const cancelButton1 = document.getElementById("cancelPlayer");
+// function togglePopup1() {
+//     console.log("hiii");
+    
+//     const pop = document.getElementById("footballPopupform");
+//     pop.classList.toggle("hidden");
+// }
+// addButton1.addEventListener("click", togglePopup1);
+// cancelButton1.addEventListener("click", togglePopup1);
 
+//-----------------------------------------put it in field-------------------------------------------------//
+// const playerCards = document.querySelectorAll(".player-card"); 
+
+// function inFields() {
+//     console.log("hiiii");
+// }
+
+// playerCards.forEach(card => {
+//     card.addEventListener("click",inFields);
+// });

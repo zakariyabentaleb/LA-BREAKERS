@@ -44,8 +44,14 @@ h1{
     grid-row: 1/2;
     background-image: url('../images/P3.webp') ;
     background-position: center; 
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;    
+    text-align: center;     
+    position: relative;  
 }
+
 .player2{
     display: flex;
     align-items: end;
@@ -420,7 +426,14 @@ h1{
     border: none;
     cursor: pointer;
   }
-  
+  .add-button-modul{
+    color: rgb(1, 1, 180);
+    font-size: 2rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
   
   .players-grid1 {
     display: grid;
@@ -449,7 +462,56 @@ h1{
     height: 100%;
     opacity: 0.5;
   }
-  
+/* Style the player card image */
+.player-img {
+    width: 80px; /* Adjust the size of the image */
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* Style the player name */
+.player-name {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+/* Style the player position */
+.player-position {
+    font-size: 1rem;
+    color:goldenrod;
+    margin-bottom: 5px;
+}
+
+/* Style the player info container */
+.player-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+/* Style for the card fields (e.g., positions like CF, LMF) */
+.card-fields {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px; /* Make sure there’s enough space */
+    border-radius: 5px;
+}
+
+/* Optional: Style for when a card field has a player */
+.card-fields .player-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* ******responsive***** */
 @media (max-width: 768px) {
     .header {
