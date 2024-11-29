@@ -7,7 +7,7 @@
             
             
             const grid = document.querySelector('.players-grid1');
-            
+            const grid2 = document.querySelector('.players-grid');
             players.forEach((player) => {
                 const card = document.createElement('div');
                 card.classList.add('player-card');
@@ -18,7 +18,6 @@
                     <p>${player.club}</p>
                     <p>${player.rating}</p>
                 `;
-                
                 grid.appendChild(card);
 
                 card.addEventListener("click", inFields);
