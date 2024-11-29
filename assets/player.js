@@ -148,13 +148,15 @@ function inFields(event) {
             position.innerText = playerPosition;
             position.classList.add("player-position");
 
-            
+            const rating = document.createElement("p");
+            rating.innerText = `Rating: ${playerRating}`;
+            rating.classList.add("player-rating");
 
             // Append player info to the field
             playerInfo.appendChild(img);
             playerInfo.appendChild(name);
             playerInfo.appendChild(position);
-          
+            playerInfo.appendChild(rating );
             field.appendChild(playerInfo);
 
             // Break the loop after adding the player to the first empty field
