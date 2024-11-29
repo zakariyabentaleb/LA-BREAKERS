@@ -20,6 +20,7 @@
                 `;
                 grid.appendChild(card);
 
+                
                 card.addEventListener("click", inFields);
             });
         })
