@@ -541,5 +541,11 @@ h1{
         justify-content: center;
         background-image: url('../images/P4.png') ;
     }
+    .players-grid1 {
+        display: grid;
+        grid-template-columns: repeat(1, 200px);
+        gap: 10px;
+        margin-top: 16px;
+      }
    
 }
