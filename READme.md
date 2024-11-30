@@ -43,7 +43,7 @@ Une application interactive pour créer, personnaliser et gérer une équipe LA 
 
 ## 🛠️ Technologies Requises
 - **HTML**
-- **CSS**
+- **CSS** (Framework Tailwind)
 - **JavaScript Vanilla** (DOM natif)
 
 ## 📚 User Stories
