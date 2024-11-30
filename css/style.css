@@ -501,6 +501,10 @@ h1{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.player-rating {
+    color:rgb(156, 135, 15);
+    font-weight: bold;  /* Optional: Make the rating stand out more */
+}
 
 /* ******responsive***** */
 @media (max-width: 768px) {

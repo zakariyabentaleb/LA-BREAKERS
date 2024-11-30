@@ -7,7 +7,7 @@
             
             
             const grid = document.querySelector('.players-grid1');
-            const grid2 = document.querySelector('.players-grid');
+          
             players.forEach((player) => {
                 const card = document.createElement('div');
                 card.classList.add('player-card');
@@ -19,8 +19,8 @@
                     <p>${player.rating}</p>
                 `;
                 grid.appendChild(card);
+                 
 
-                
                 card.addEventListener("click", inFields);
             });
         })
@@ -55,7 +55,7 @@ function inFields(event) {
     const playerName = playerCard.querySelector("h3").innerText;
     const playerPosition = playerCard.querySelector("p").innerText; 
     const playerImageSrc = playerCard.querySelector("img").src;
-
+    // const playerRating = playerCard.querySelector("p:nth-of-type(3)").innerText;
     // Find all the target fields with the same position
     const targetFields = Array.from(cardFields).filter(field => 
         field.querySelector(".position").innerText === playerPosition
@@ -85,12 +85,17 @@ function inFields(event) {
             position.innerText = playerPosition;
             position.classList.add("player-position");
 
+            // const rating = document.createElement("p");
+            // rating.innerText = playerRating;
+            // rating.classList.add("player-rating");
+            
           
 
             // Append player info to the field
             playerInfo.appendChild(img);
             playerInfo.appendChild(name);
             playerInfo.appendChild(position);
+            // playerInfo.appendChild(rating);
             field.appendChild(playerInfo);
 
             // Break the loop after adding the player to the first empty field

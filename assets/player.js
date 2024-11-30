@@ -76,6 +76,7 @@ function addplayer() {
         let playerCopy = playerContent.cloneNode(true);
         playerList.appendChild(playerContent);
         document.querySelector(".players-grid1").append(playerCopy);
+        playerCopy.addEventListener("click", inFields);
 
         // -------------------------------------remove button---------------------------------------------//
         const removeButton = document.createElement("button");
