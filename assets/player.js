@@ -54,13 +54,18 @@ function addplayer() {
         playerContent.className = "player-card";
 
         const playerImg = document.createElement("img"); 
-         playerImg.src = `../images/P6.png`; ;     
+         playerImg.src = `../images/P6.png`; 
+
+         const playerposition = document.createElement("p");
+        playerposition.innerText = playerText2;
+         
+         const playerteam= document.createElement("p");
+         playerteam.innerText = "FC Youcode";
         
         const playerName = document.createElement("h3");
         playerName.innerText = playerText1;
         
-        const playerposition = document.createElement("p");
-        playerposition.innerText = playerText2;
+      
         
         
         const playerrating = document.createElement("p");
@@ -70,6 +75,7 @@ function addplayer() {
         playerContent.appendChild(playerImg);
         playerContent.appendChild(playerName);
         playerContent.appendChild(playerposition);
+        playerContent.appendChild(playerteam);
         playerContent.appendChild(playerrating);
        
        
@@ -103,6 +109,7 @@ function addplayer() {
         playerContent.appendChild(playerImg);
         playerContent.appendChild(playerName);
         playerContent.appendChild(playerposition);
+        playerContent.appendChild(playerteam);
         playerContent.appendChild(playerrating);
        
         playerContent.appendChild(removeButton);
