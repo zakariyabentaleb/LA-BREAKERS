@@ -1,8 +1,6 @@
 # Ultimate Team Builder Application
 
- ![App Screenshot](./assets/images/mockup.png)
- ![App Screenshot](./assets/images/mockup2.png)
-
+ ![App Screenshot](./images/readmefile.png)
 
 Une application interactive pour créer, personnaliser et gérer une équipe LA BREAKERS (Ultimate Team). L'accent est mis sur une interface utilisateur dynamique, et une expérience immersive pour les utilisateurs. 
 
