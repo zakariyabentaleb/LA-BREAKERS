@@ -83,7 +83,8 @@ function addplayer() {
         removeButton.innerText = "Remove";
         removeButton.className = "button1";
         removeButton.onclick = function () {
-            playerList.removeChild(playerContent);
+            playerList.removeChild(playerContent);  // Remove the original player content
+            document.querySelector(".players-grid1").removeChild(playerCopy);  // Remove the cloned player
         };
 
          // -------------------------------------edit button ---------------------------------------------// 
@@ -96,8 +97,9 @@ function addplayer() {
              document.getElementById("playerRating").value = playerText3;
              togglePopup();
              playerList.removeChild(playerContent);
+             document.querySelector(".players-grid1").removeChild(playerCopy); 
          };
-        
+        // -------------------------------------------------------------------------------------------------//
         playerContent.appendChild(playerImg);
         playerContent.appendChild(playerName);
         playerContent.appendChild(playerposition);
@@ -122,3 +124,4 @@ function togglePopup() {
 }
 addButton.addEventListener("click", togglePopup);
 cancelButton.addEventListener("click", togglePopup);
+// -----------------------------------------------------------------//

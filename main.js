@@ -65,17 +65,17 @@ function inFields(event) {
     for (let field of targetFields) {
         // Check if the field already has a player assigned (by checking if it has a child with class "player-info")
         if (!field.querySelector(".player-info")) {
-            // Create a container for player info
+            
             const playerInfo = document.createElement("div");
             playerInfo.classList.add("player-info");
 
-            // Add player image
+            
             const img = document.createElement("img");
             img.src = playerImageSrc;
             img.alt = playerName;
             img.classList.add("player-img");
 
-            // Add player name
+           
             const name = document.createElement("h1");
             name.innerText = playerName;
             name.classList.add("player-name");
@@ -91,7 +91,7 @@ function inFields(event) {
             
           
 
-            // Append player info to the field
+           
             playerInfo.appendChild(img);
             playerInfo.appendChild(name);
             playerInfo.appendChild(position);
