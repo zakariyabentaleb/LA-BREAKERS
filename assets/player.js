@@ -36,7 +36,7 @@ function addplayer() {
 
     const ratingInput = document.getElementById("playerRating");
     if(!regexName.test(playerText1)){
-        alert("wesh a said")
+        alert("veuillez slp entre un nom du taille entre 1 et 15")
         return
     }
     if (ratingInput.value<0 || ratingInput.value>100 ){
