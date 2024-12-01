@@ -3,7 +3,7 @@
       {
         "name": "Zakariya",
         "photo": "../images/ANA.png",
-        "position": "CF",
+        "position": "CF1",
         "nationality": "Italy",
         "flag": "https://cdn.sofifa.net/flags/it.png",
         "club": "Fc Youcode",
@@ -19,7 +19,7 @@
       {
         "name": "Lionel Messi",
         "photo": "https://cdn.sofifa.net/players/158/023/25_120.png",
-        "position": "CF",
+        "position": "CF2",
         "nationality": "Argentina",
         "flag": "https://cdn.sofifa.net/flags/ar.png",
         "club": "Inter Miami",
@@ -35,7 +35,7 @@
       {
         "name": "Ronaldo",
         "photo": "https://cdn.sofifa.net/players/020/801/25_120.png",
-        "position": "CF",
+        "position": "CF1",
         "nationality": "Portugal",
         "flag": "https://cdn.sofifa.net/flags/pt.png",
         "club": "Al Nassr",
@@ -51,7 +51,7 @@
       {
         "name": "Bruyne",
         "photo": "https://cdn.sofifa.net/players/192/985/25_120.png",
-        "position": "CMF",
+        "position": "CMF2",
         "nationality": "Belgium",
         "flag": "https://cdn.sofifa.net/flags/be.png",
         "club": "Manchester City",
@@ -67,7 +67,7 @@
       {
         "name": "Mbappé",
         "photo": "https://cdn.sofifa.net/players/231/747/25_120.png",
-        "position": "CF",
+        "position": "CF2",
         "nationality": "France",
         "flag": "https://cdn.sofifa.net/flags/fr.png",
         "club": "Real Madrid",
@@ -83,7 +83,7 @@
       {
         "name": "van Dijk",
         "photo": "https://cdn.sofifa.net/players/203/376/25_120.png",
-        "position": "CB",
+        "position": "CB2",
         "nationality": "Netherlands",
         "flag": "https://cdn.sofifa.net/flags/nl.png",
         "club": "Liverpool",
@@ -99,7 +99,7 @@
       {
         "name": "Rudiger",
         "photo": "https://cdn.sofifa.net/players/205/452/25_120.png",
-        "position": "CB",
+        "position": "CB1",
         "nationality": "Germany",
         "flag": "https://cdn.sofifa.net/flags/de.png",
         "club": "Real Madrid",
@@ -179,7 +179,7 @@
       {
         "name": "Modrić",
         "photo": "https://cdn.sofifa.net/players/177/003/25_120.png",
-        "position": "CMF",
+        "position": "CMF1",
         "nationality": "Croatia",
         "flag": "https://cdn.sofifa.net/flags/hr.png",
         "club": "Real Madrid",
@@ -307,7 +307,7 @@
       {
         "name": "Fernandes",
         "photo": "https://cdn.sofifa.net/players/212/198/25_120.png",
-        "position": "CMF",
+        "position": "CMF2",
         "nationality": "Portugal",
         "flag": "https://cdn.sofifa.net/flags/pt.png",
         "club": "Manchester United",
@@ -402,7 +402,7 @@
       {
         "name": "Saibari",
         "photo": "https://cdn.sofifa.net/players/259/480/25_120.png",
-        "position": "CMF",
+        "position": "CMF1",
         "nationality": "Morocco",
         "flag": "https://cdn.sofifa.net/flags/ma.png",
         "club": "PSV",

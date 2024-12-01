@@ -46,60 +46,58 @@ function removemodul() {
 closeModal.addEventListener("click", removemodul);
 
 //-----------------------------------------put it in field-------------------------------------------------//
-const playerCards = document.querySelectorAll(".player-card"); 
-const cardFields = document.querySelectorAll(".card-fields"); 
+const playerCards = document.querySelectorAll(".player-card");
+const cardFields = document.querySelectorAll(".card-fields");
 
 function inFields(event) {
-    alert("added")
+    alert("added");
     const playerCard = event.currentTarget;
     const playerName = playerCard.querySelector("h3").innerText;
-    const playerPosition = playerCard.querySelector("p").innerText; 
+    const playerPosition = playerCard.querySelector("p").innerText;
     const playerImageSrc = playerCard.querySelector("img").src;
     const playerRating = playerCard.querySelector("p:nth-of-type(3)").innerText;
-    // Find all the target fields with the same position
-    const targetFields = Array.from(cardFields).filter(field => 
+
+    //--------------------target have same position---------------------------//
+    const targetFields = Array.from(cardFields).filter(field =>
         field.querySelector(".position").innerText === playerPosition
     );
-  
-    // Loop through the fields and append to the first empty one
+
     for (let field of targetFields) {
-        // Check if the field already has a player assigned (by checking if it has a child with class "player-info")
-        if (!field.querySelector(".player-info")) {
-            
-            const playerInfo = document.createElement("div");
-            playerInfo.classList.add("player-info");
+        const existingPlayer = field.querySelector(".player-info");
 
-            
-            const img = document.createElement("img");
-            img.src = playerImageSrc;
-            img.alt = playerName;
-            img.classList.add("player-img");
-
+        if (existingPlayer) {
            
-            const name = document.createElement("h1");
-            name.innerText = playerName;
-            name.classList.add("player-name");
-
-            // Add player position
-            const position = document.createElement("p");
-            position.innerText = playerPosition;
-            position.classList.add("player-position");
-
-            const rating = document.createElement("p");
-            rating.innerText = playerRating;
-            rating.classList.add("player-rating");
-            
-          
-
-           
-            playerInfo.appendChild(img);
-            playerInfo.appendChild(name);
-            playerInfo.appendChild(position);
-            playerInfo.appendChild(rating);
-            field.appendChild(playerInfo);
-
-            // Break the loop after adding the player to the first empty field
-            break;
+            field.removeChild(existingPlayer);
         }
+
+    //--------------- new player in field----------------------//
+        const playerInfo = document.createElement("div");
+        playerInfo.classList.add("player-info");
+
+        const img = document.createElement("img");
+        img.src = playerImageSrc;
+        img.alt = playerName;
+        img.classList.add("player-img");
+
+        const name = document.createElement("h1");
+        name.innerText = playerName;
+        name.classList.add("player-name");
+
+        const position = document.createElement("p");
+        position.innerText = playerPosition;
+        position.classList.add("player-position");
+
+        const rating = document.createElement("p");
+        rating.innerText = playerRating;
+        rating.classList.add("player-rating");
+
+        playerInfo.appendChild(img);
+        playerInfo.appendChild(name);
+        playerInfo.appendChild(position);
+        playerInfo.appendChild(rating);
+
+        field.appendChild(playerInfo);
+
+        break;
     }
 }
